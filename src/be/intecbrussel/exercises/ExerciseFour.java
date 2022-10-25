@@ -12,7 +12,7 @@ public class ExerciseFour {
 
     public static boolean hasBeenGuessed(Pos gues){
         for (Pos pos : guessed) {
-            if(pos.compareTo(gues) == 0){
+            if(pos.equals(gues)){
                 return true;
             }
         }
@@ -69,7 +69,7 @@ public class ExerciseFour {
                     continue;
                 }
             }
-        } while (guessed.length == 0 || guessed[guessed.length - 1].compareTo(eiPositie) != 0);
+        } while (guessed.length == 0 || guessed[guessed.length - 1].equals(eiPositie));
         s.close();
     }
 

@@ -1,6 +1,6 @@
 package be.intecbrussel.hulpClasses;
 
-public class Pos implements Comparable<Pos>{
+public class Pos{
     public int x;
     public int y;
 
@@ -10,10 +10,14 @@ public class Pos implements Comparable<Pos>{
     }
 
     @Override
-    public int compareTo(Pos o) {
-        if(this.x == o.x && this.y == o.y){
-            return 0;
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
         }
-        return 1;
+        if(o instanceof Pos){
+            Pos obj = (Pos) o;
+            return this.x == obj.x && this.y == obj.y;
+        }
+        return false;
     }
 }
