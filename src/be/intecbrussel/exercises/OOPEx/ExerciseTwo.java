@@ -1,4 +1,4 @@
-package be.intecbrussel.exercises;
+package be.intecbrussel.exercises.OOPEx;
 
 import java.util.Scanner;
 
